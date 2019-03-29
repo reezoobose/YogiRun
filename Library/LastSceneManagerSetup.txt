@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scene/Gameover.unity
+- path: Assets/_Scene/LearningYogi.unity
   isLoaded: 1
   isActive: 1

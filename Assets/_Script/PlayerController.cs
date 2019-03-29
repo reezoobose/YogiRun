@@ -39,6 +39,11 @@ namespace _Script
         /// </summary>
         public static EventHandler<PlayerStateChangeEventArgs> PlayerStateChange;
 
+        /// <summary>
+        ///     Jump sound.
+        /// </summary>
+        public AudioSource jumpSound;
+
         #endregion
 
         #region Private Filelds
@@ -147,6 +152,11 @@ namespace _Script
             PlayerStateChangeRequest(PlayerState.Jumping);
             //Jump.
             _rigidBody.velocity = Vector2.up * jumpForce;
+            //On space jump .
+            if (jumpSound != null)
+            {
+                jumpSound.Play();
+            }
         }
 
         /// <summary>

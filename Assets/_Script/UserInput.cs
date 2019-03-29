@@ -37,10 +37,7 @@ namespace _Script
         /// </summary>
         public static event Reset ResetRequested;
 
-        /// <summary>
-        ///     Jump sound.
-        /// </summary>
-        private AudioSource jumpSound;
+
 
         #endregion
 
@@ -55,9 +52,7 @@ namespace _Script
             //Connect jump.
             if (jumButton != null)
             {
-#if UNITY_EDITOR
-                jumpSound = jumButton.gameObject.GetComponent<AudioSource>();
-#endif
+
                 jumButton.onClick.AddListener(() =>
                 {
                     if (Jumped != null) Jumped.Invoke();
@@ -94,10 +89,7 @@ namespace _Script
             if (Jumped != null)
             {
                 Jumped.Invoke();
-                jumpSound.Play();
             }
-
-            //play sound.
         }
 
 #endif
